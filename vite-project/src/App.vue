@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
@@ -82,4 +82,38 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+</style>
+ -->
+
+ <script setup>
+<template>
+  <Bar v-if="loaded" :data="chartData" />
+</template>
+
+<script lang="ts">
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js'
+import { Bar } from 'vue-chartjs'
+import * as chartConfig from './chartConfig.js'
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+
+export default {
+  name: 'App',
+  components: {
+    Bar
+  },
+  data() {
+    return ChartConfig
+  }
+}
+</script>
+
 </style>
