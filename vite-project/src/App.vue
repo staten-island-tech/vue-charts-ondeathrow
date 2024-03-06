@@ -1,9 +1,9 @@
-<!-- <script setup>
+<!--  <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-</script>
+</script> -->
 
-<template>
+<!-- <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -15,12 +15,24 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
-  </header>
+  </header> -->
 
-  <RouterView />
+
+  <template>
+  <BarChart />
 </template>
 
-<style scoped>
+<script>
+import BarChart from 'path/to/component/BarChart'
+
+export default {
+  name: 'App',
+  components: { BarChart }
+}
+</script>
+
+
+<style>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -83,37 +95,5 @@ nav a:first-of-type {
   }
 }
 </style>
- -->
 
- <script setup>
-<template>
-  <Bar v-if="loaded" :data="chartData" />
-</template>
 
-<script lang="ts">
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale
-} from 'chart.js'
-import { Bar } from 'vue-chartjs'
-import * as chartConfig from './chartConfig.js'
-
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
-
-export default {
-  name: 'App',
-  components: {
-    Bar
-  },
-  data() {
-    return ChartConfig
-  }
-}
-</script>
-
-</style>
