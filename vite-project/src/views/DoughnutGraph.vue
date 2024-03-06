@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h2>Statistics for Deaths in NYC</h2>
+    
   </div>
 </template>
 
 <script>
-//cards and stuff goes here 
+
 </script>
 
 <style scoped>
