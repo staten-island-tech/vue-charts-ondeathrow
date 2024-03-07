@@ -10,6 +10,7 @@ const router = createRouter({
       component: HomeView
     },
     {
+<<<<<<< Updated upstream
       path: '/doughnutgraph',
       name: 'doughnutgraph',
       // route level code-splitting
@@ -24,6 +25,18 @@ const router = createRouter({
     } */ /* 
     unblock this when vincents branch thing is committed to main 
  */  ]
+=======
+      path: '/bargraph',
+      name: 'bargraph',
+      component: () => import('../views/BarChart.vue')
+    },
+    {
+      path: '/doughnutgraph',
+      name: 'doughnutgraph',
+      component: () => import('../views/DoughnutGraph.vue')
+    }
+  ]
+>>>>>>> Stashed changes
 })
 
 export default router

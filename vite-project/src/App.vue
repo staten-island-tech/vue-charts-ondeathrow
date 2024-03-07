@@ -2,11 +2,22 @@
   <div>
     <header>
       <nav>
+<<<<<<< Updated upstream
         <RouterLink to="/">Main Page</RouterLink>
         <RouterLink to="/doughnutgraph">Doughnut Graph</RouterLink>
         <RouterLink to="/barchart">Bar Chart</RouterLink>
       </nav>
     </header>
+=======
+        <RouterLink to="/">Wish</RouterLink>
+        <RouterLink to="/barchart">Bar Chart</RouterLink>
+        <RouterLink to= "/doughnutgraph">Doughnut Graphs</RouterLink>
+      </nav>
+    </header>
+    <div class="routerstuff">
+      <RouterView />
+    </div>
+>>>>>>> Stashed changes
   </div>
 </template>
 
@@ -20,7 +31,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+<<<<<<< Updated upstream
   box-shadow: 0 1px 4px #6c757d;
+=======
+  box-shadow: 0 2px 4px;
+>>>>>>> Stashed changes
   z-index: 1000;
   background-color: #ffffff;
   height: 40px;
@@ -42,6 +57,10 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+.routerstuff {
+  padding-top: 60px;
 }
 
 @media (min-width: 1024px) {
