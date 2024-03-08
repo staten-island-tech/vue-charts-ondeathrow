@@ -1,4 +1,5 @@
 <template>
+  <h1>bar</h1>
     <div class="container">
       <Bar v-if="loaded" :data="chartData" />
     </div>
