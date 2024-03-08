@@ -5,7 +5,32 @@
 </template>
 
 <script>
-//cards and stuff goes here 
+export default {
+    data(){
+      return {
+      nycdeaths:[ ],
+  };
+  },
+    mounted: function(){
+    this.fetchData();
+  },
+    methods: {
+        fetchData: async function(){
+        try{
+        const results = await fetch(
+        'https://data.cityofnewyork.us/resource/jb7j-dtam.json'
+      );
+        const data = await results.json();
+        this.nycdeaths = data.results
+        console.log(data); //uhhh quesitonable
+      } catch(error){
+        console.log('errorrrrrrrrrrrrrrrrr lkraksjlasjfl;dsf asdfjalfsjaflasdfjasdfl; ');
+      }
+    }
+  }
+}
+
+
 </script>
 
 <style scoped>
