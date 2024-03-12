@@ -1,13 +1,7 @@
 <template>
-    <div>
-        <div class="card">
-      <div class="backgroundimgcolor">
-      <img :src="Destination.profileimg" alt="" />
-    </div>
-    <h2>•---------•</h2>
-    <h2>{{ Destination.name }}</h2>
+  <div class="card">
+    <h2>{{ data.leading_cause}}</h2>
   </div>
-    </div>
 </template>
 
 <script>
@@ -27,14 +21,6 @@
   text-align: center;
   filter: grayscale(100%);
   box-sizing: border-box;
-}
-
-.backgroundimgcolor {
-  background-color: #77669c;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 body {

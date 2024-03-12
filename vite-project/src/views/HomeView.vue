@@ -2,9 +2,13 @@
   <div>
     <h2>Statistics for Deaths in NYC</h2>
   </div>
+
 </template>
 
 <script>
+
+/* import DeathCard from "@/components/DeathCard.vue"; */
+
 export default {
     data(){
       return {
@@ -29,8 +33,7 @@ export default {
     }
   }
 }
-
-
+  
 </script>
 
 <style scoped>
