@@ -1,12 +1,12 @@
 <template>
   <h1>bar</h1>
-    <div class="container">
-      <Bar v-if="loaded" :data="chartData" />
-    </div>
+<!--     <div class="container">
+      <Bar v-if="loaded" :data="chartData" /> -->
+<!--     </div> -->
   </template>
   
   <script>
-  import { Bar } from 'vue-chartjs'
+/*   import { Bar } from 'vue-chartjs'
   import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
   
   ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
@@ -30,5 +30,5 @@
         console.error(e)
       }
     }
-  }
+  } */
   </script>
