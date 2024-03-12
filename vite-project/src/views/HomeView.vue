@@ -1,21 +1,35 @@
 <template>
   <div>
-
+    <h2>Statistics for Deaths in NYC</h2>
   </div>
 </template>
 
 <script>
-import{ref, onMounted} from "vue";
-  const skull= ref("");
-  async function getskull(){
-    let res= await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
-    let data= await res.json();
-    skull.value = data;
+export default {
+    data(){
+      return {
+      nycdeaths:[ ],
+  };
+  },
+    mounted: function(){
+    this.fetchData();
+  },
+    methods: {
+        fetchData: async function(){
+        try{
+        const results = await fetch(
+        'https://data.cityofnewyork.us/resource/jb7j-dtam.json'
+      );
+        const data = await results.json();
+        this.nycdeaths = data.results
+        console.log(data); //uhhh quesitonable
+      } catch(error){
+        console.log('errorrrrrrrrrrrrrrrrr lkraksjlasjfl;dsf asdfjalfsjaflasdfjasdfl; ');
+      }
+    }
   }
+}
 
-onMounted(()=> {
-  getskull();
-});
 
 </script>
 
