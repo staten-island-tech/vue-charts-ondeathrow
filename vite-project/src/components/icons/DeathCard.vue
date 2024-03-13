@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h2>{{ data.leading_cause}}</h2>
+    
   </div>
 </template>
 

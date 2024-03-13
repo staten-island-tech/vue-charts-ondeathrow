@@ -26,7 +26,7 @@ export default {
       );
         const data = await results.json();
         this.nycdeaths = data.results
-        console.log(data); //uhhh quesitonable
+        console.log(data); 
       } catch(error){
         console.log('errorrrrrrrrrrrrrrrrr lkraksjlasjfl;dsf asdfjalfsjaflasdfjasdfl; ');
       }
