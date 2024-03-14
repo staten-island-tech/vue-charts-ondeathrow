@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h2>Statistics for Deaths in NYC</h2>
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="container">
     <h1>bleh</h1>
+    
   </div>
 </template>
 
@@ -30,7 +31,8 @@ export default {
     }
   }
 }  */
-import{ref, onMounted, onUnmounted} from "vue";
+import{ref, onMounted} from "vue";
+/* import DeathView from '../views' */
   const nycdeaths= ref("");
   async function getnycdeaths(){
     let res= await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
@@ -41,7 +43,6 @@ import{ref, onMounted, onUnmounted} from "vue";
 onMounted(()=> {
   getnycdeaths();
 
-  onUnmounted(() => clearInterval(intervalId))
 });
 
 
