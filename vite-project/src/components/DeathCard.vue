@@ -1,11 +1,14 @@
 <template>
   <div class="card">
-    
+    <h2>{{ nycdeaths.deaths}}</h2>
   </div>
 </template>
 
 <script>
-
+const props = defineProps({
+  nycdeaths: Object,
+  id: Number
+})
 </script>
 
 <style scoped>

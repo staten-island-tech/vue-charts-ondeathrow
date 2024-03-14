@@ -10,10 +10,19 @@
     <div class="routerstuff">
       <RouterView />
     </div>
+    <DeathCard v-for="(monster, index) in hi"
+    :key = "monster.year"
+    :id = "index+1"
+    :hi = "monster"/>
   </div>
 </template>
 
+<script setup>
+import DeathCard from "./components/DeathCard.vue"
+</script>
+
 <style scoped>
+
 body {
   margin: 0;
 }
