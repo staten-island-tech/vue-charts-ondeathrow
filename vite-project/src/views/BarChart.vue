@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <h1>bleh</h1>
-    
+    <DeathView
+    v-for="(leading_cause) in deaths"
+    :key="leading_cause.name"
+    :deaths="leading_cause" ></DeathView>
   </div>
 </template>
 
@@ -32,7 +35,7 @@ export default {
   }
 }  */
 import{ref, onMounted} from "vue";
-/* import DeathView from '../views' */
+import DeathView from '../components/DeathView.vue'
   const nycdeaths= ref("");
   async function getnycdeaths(){
     let res= await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
