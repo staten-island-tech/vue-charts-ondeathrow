@@ -7,8 +7,6 @@
 
 <script>
 
-/* import DeathCard from "@/components/DeathCard.vue"; */
-
 export default {
     data(){
       return {

@@ -1,14 +1,15 @@
 <template>
   <div class="card">
     <h2>{{ nycdeaths.deaths}}</h2>
+    <h3> {{ id }}</h3>
   </div>
 </template>
 
-<script>
+<script setup>
 const props = defineProps({
   nycdeaths: Object,
-  id: Number
-})
+  id: Number 
+});
 </script>
 
 <style scoped>
