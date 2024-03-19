@@ -9,6 +9,24 @@
 </template>
 
 <script>
+import{ref, onMounted} from "vue";
+import DeathView from '../components/DeathView.vue'
+  const nycdeaths= ref("");
+  async function getnycdeaths(){
+    let res= await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
+    let data= await res.json();
+    nycdeaths.value = data;
+  }
+
+onMounted(()=> {
+  getnycdeaths();
+
+});
+
+
+</script> 
+
+
 /*  import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
@@ -34,19 +52,3 @@ export default {
     }
   }
 }  */
-import{ref, onMounted} from "vue";
-import DeathView from '../components/DeathView.vue'
-  const nycdeaths= ref("");
-  async function getnycdeaths(){
-    let res= await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
-    let data= await res.json();
-    nycdeaths.value = data;
-  }
-
-onMounted(()=> {
-  getnycdeaths();
-
-});
-
-
-</script> 
