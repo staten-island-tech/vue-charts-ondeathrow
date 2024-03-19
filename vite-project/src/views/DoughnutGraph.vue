@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <DeathCard v-for="(hi, index + 1) in nycdeaths"
+    <DeathCard v-for="(hi, index) in nycdeaths"
     :key = "nycdeaths.leading_cause"
-    :id: "index + 1"
+    :id = "index + 1"
     :nycdeaths = "hi"
     />
   </div>

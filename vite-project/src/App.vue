@@ -12,7 +12,7 @@
     </div>
     <DeathCard v-for="(monster, index) in hi"
     :key = "monster.year"
-    :id = "index+1"
+    :id = "index + 1"
     :hi = "monster"/>
   </div>
 </template>
