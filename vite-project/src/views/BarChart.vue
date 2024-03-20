@@ -10,7 +10,7 @@
 
 <script>
 import{ref, onMounted} from "vue";
-import DeathView from '../components/DeathView.vue'
+import DeathCard from '../components/DeathCard.vue'
   const nycdeaths= ref("");
   async function getnycdeaths(){
     let res= await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
@@ -18,16 +18,7 @@ import DeathView from '../components/DeathView.vue'
     nycdeaths.value = data;
   }
 
-onMounted(()=> {
-  getnycdeaths();
-
-});
-
-
-</script> 
-
-
-/*  import { Bar } from 'vue-chartjs'
+  import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
@@ -51,4 +42,13 @@ export default {
       console.error(e)
     }
   }
-}  */
+}  
+onMounted(()=> {
+  getnycdeaths();
+
+});
+
+
+</script> 
+
+
