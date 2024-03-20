@@ -2,7 +2,6 @@
   <div>
     <h2>Statistics for Deaths in NYC</h2>
   </div>
-
 </template>
 
 <script>
