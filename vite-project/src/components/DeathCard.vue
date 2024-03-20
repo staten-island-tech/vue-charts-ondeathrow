@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <h2>{{ nycdeaths.deaths}}</h2>
-    <h3> {{ id }}</h3>
+    <h2>{{ nycdeaths.leading_cause }}</h2>
+    <h3>{{ id }}</h3>
   </div>
 </template>
 
