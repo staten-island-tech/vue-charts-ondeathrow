@@ -4,19 +4,49 @@
       <nav>
         <RouterLink to="/">Main Page</RouterLink>
         <RouterLink to="/barchart">Bar Chart</RouterLink>
-        <RouterLink to="/doughnutgraph">Doughnut Chart</RouterLink>
+        <RouterLink to="/doughnutgraph">Doughnut Graph</RouterLink>
       </nav>
     </header>
     <div class="routerstuff">
       <RouterView />
     </div>
+    <DeathCard v-for="(monster, index) in nycdeaths"
+      :key="index"
+      :id="index + 1"
+      :nycdeaths="monster"
+    />
   </div>
 </template>
 
+
+<script setup>
+import { ref, onMounted } from "vue";
+import DeathCard from "./components/DeathCard.vue";
+
+
+const nycdeaths = ref('');
+
+
+async function getnycdeaths() {
+  let res = await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
+  let data = await res.json();
+  nycdeaths.value = data;
+}
+
+
+onMounted(() => {
+  getnycdeaths();
+});
+</script>
+
+
 <style scoped>
+
+
 body {
   margin: 0;
 }
+
 
 header {
   position: fixed;
@@ -30,6 +60,7 @@ header {
   text-align: center;
 }
 
+
 nav {
   display: flex;
   justify-content: center;
@@ -42,6 +73,7 @@ nav a {
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
+
 
 nav a:first-of-type {
   border: 0;
@@ -59,10 +91,11 @@ nav a:first-of-type {
     height: 60px;
   }
 
+
   nav {
-    margin-left: 0; 
+    margin-left: 0;
     font-size: 1rem;
-    padding: 0; 
+    padding: 0;
     margin-top: 0;
   }
 }
