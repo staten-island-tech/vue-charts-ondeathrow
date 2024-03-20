@@ -1,13 +1,19 @@
 <template>
-    <div>
-      <h1>Doughnut Graph</h1>
-    </div>
-  </template>
-  
-  <script>
-  
-  </script>
-  
-  <style scoped>
-  
-  </style>
+  <div class="container">
+    <DeathCard v-for="(item, index) in nycdeaths"
+      :key="index"
+      :id="index + 1"
+      :nycdeaths="item"
+    />
+  </div>
+</template>
+<script setup>
+
+
+</script>
+
+
+<style scoped>
+
+
+</style>
