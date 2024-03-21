@@ -1,19 +1,15 @@
 <template>
   <div class="container">
-    <DeathCard v-for="(item, index) in nycdeaths"
-      :key="index"
-      :id="index + 1"
-      :nycdeaths="item"
-    />
   </div>
 </template>
 <script setup>
 
-
+import { Doughnut } from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 </script>
 
 
 <style scoped>
 
 
-</style>

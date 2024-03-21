@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h2>Statistics for Deaths in NYC</h2>
   </div>
 </template>
@@ -23,15 +23,14 @@ export default {
       );
         const data = await results.json();
         this.nycdeaths = data.results
-        console.log(data); //uhhh quesitonable
+        console.log(data); 
       } catch(error){
         console.log('errorrrrrrrrrrrrrrrrr lkraksjlasjfl;dsf asdfjalfsjaflasdfjasdfl; ');
       }
     }
   }
 }
-
-
+  
 </script>
 
 <style scoped>
