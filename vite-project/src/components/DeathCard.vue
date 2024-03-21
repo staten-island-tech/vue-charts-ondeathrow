@@ -1,7 +1,16 @@
 <template>
   <div class="card">
     <h2>{{ nycdeaths.leading_cause }}</h2>
-    <h3>{{ id }}</h3>
+    <h5>{{ nycdeaths.deaths }} 
+      <template v-if = "nycdeaths.sex === 'M'">
+        male
+      </template>
+      <template v-else>
+        female
+      </template>
+      {{ nycdeaths.race_ethnicity }}s have died from {{ nycdeaths.leading_cause }}</h5>
+      <h5>Death/Mortality Rate: {{ nycdeaths.death_rate }}</h5>
+<!--     <h3>{{ id }}</h3> dont really need this lmao-->
   </div>
 </template>
 
@@ -14,8 +23,8 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  height: 280px;
-  width: 200px;
+  height: 350px;
+  width: 300px;
   border-radius: 12px;
   padding: 2%;
   margin: 0.5rem 0.5rem;
