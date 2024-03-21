@@ -1,7 +1,13 @@
 <template>
   <div class="card">
     <h2>{{ nycdeaths.leading_cause }}</h2>
-    <h5>{{ nycdeaths.deaths }} 
+    <h5>
+      <template v-if = "nycdeaths.deaths === '.'">
+        An unknown number of
+      </template>
+      <template v-else>
+        {{ nycdeaths.deaths }}
+      </template>
       <template v-if = "nycdeaths.sex === 'M'">
         male
       </template>
@@ -9,7 +15,14 @@
         female
       </template>
       {{ nycdeaths.race_ethnicity }}s have died from {{ nycdeaths.leading_cause }}</h5>
-      <h5>Death/Mortality Rate: {{ nycdeaths.death_rate }}</h5>
+      <h5>Death/Mortality Rate: 
+        <template v-if="nycdeaths.death_rate === '.'">
+          this information is not available :(
+        </template>
+        <template v-else>
+          {{ nycdeaths.death_rate}}
+        </template>
+      </h5>
 <!--     <h3>{{ id }}</h3> dont really need this lmao-->
   </div>
 </template>

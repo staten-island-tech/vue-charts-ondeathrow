@@ -10,10 +10,10 @@
     <div class="routerstuff">
       <RouterView />
     </div>
-    <DeathCard v-for="(monster, index) in nycdeaths"
+    <DeathCard v-for="(deaths, index) in nycdeaths"
       :key="index"
       :id="index + 1"
-      :nycdeaths="monster"
+      :nycdeaths="deaths"
     />
   </div>
 </template>
