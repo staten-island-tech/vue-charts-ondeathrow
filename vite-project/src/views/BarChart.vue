@@ -24,7 +24,6 @@ export default {
   name: 'BarChart',
   components: { Bar },
   data: () => ({
-        required: true,
     loaded: false,
     chartData: null
   }),
@@ -32,7 +31,7 @@ export default {
     this.loaded = false
 
     try {
-      const { api } = await fetch('/https://data.cityofnewyork.us/resource/jb7j-dtam.json')
+      const { api } = await fetch('https://data.cityofnewyork.us/resource/jb7j-dtam.json')
       this.chartdata = api
       this.loaded = true
     } catch (e) {
