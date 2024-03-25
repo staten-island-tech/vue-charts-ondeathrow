@@ -10,29 +10,11 @@
     <div class="routerstuff">
       <RouterView />
     </div>
-    <DeathCard v-for="(deaths, index) in nycdeaths"
-      :key="index"
-      :id="index + 1"
-      :nycdeaths="deaths"
-    />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import DeathCard from "./components/DeathCard.vue";
 
-const nycdeaths = ref('');
-
-async function getnycdeaths() {
-  let res = await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
-  let data = await res.json();
-  nycdeaths.value = data;
-}
-
-onMounted(() => {
-  getnycdeaths();
-});
 </script>
 
 <style scoped>
