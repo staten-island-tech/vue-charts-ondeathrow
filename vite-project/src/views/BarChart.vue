@@ -1,12 +1,12 @@
-<template>
-  <div ref="nycdeaths">
-    <h1>bleh</h1>
+ <template>
+  <div class="container">
+    <Bar v-if="loaded" :data="chartData" />
   </div>
 </template>
 
 <script>
+import { Bar } from 'vue-chartjs'
 import{ref, onMounted} from 'vue';
-import DeathCard from '../components/DeathCard.vue'
 
   const nycdeaths= ref('');
   async function getnycdeaths(){
