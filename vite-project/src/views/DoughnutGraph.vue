@@ -45,10 +45,16 @@ export default{
           `https://data.cityofnewyork.us/resource/jb7j-dtam.json`
         );
         const data = await result.json()
-        const seven = data.filter(item => item.year === '2007')
+        const seven = data.filter(item => item.year === '2007' && item.deaths !== '.')
         console.log(seven) //test 
         let sevendata = seven.map(item => parseInt(item.deaths))
-
+        //this bit only takes the deaths attribute of seven
+        console.log(sevendata)//another test
+        let sum = 0;
+        for (let i = 0; i < sevendata.length; i++) {
+          sum +=sevendata[i]
+        }
+        console.log(sum)
         //this part should get the values of deaths in 2007 and add them 
   
         //make a part that replaces the first value of data to be the value of seven data 
