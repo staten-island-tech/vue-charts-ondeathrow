@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/doughnutgraph',
       name: 'doughnutgraph',
       component: () => import('../views/DoughnutGraph.vue')
+    },
+    {
+      path: '/NYCDeathsData:id',
+      name: 'NYCDeaths',
+      component: () => import('../views/Deathsdata.vue')
     }
   ]
 })
