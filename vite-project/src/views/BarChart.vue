@@ -6,14 +6,14 @@
 
 <script>
 import { Bar } from 'vue-chartjs'
-import{ref, onMounted} from 'vue';
-
+// import{ref, onMounted} from 'vue';
+/* 
    const nycdeaths= ref('');
   async function getnycdeaths(){
     let res= await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json");
     let data= await res.json();
     nycdeaths.value = data;
-   }
+   } */
 
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
@@ -30,17 +30,16 @@ export default {
     this.loaded = false
 
     try {
-      const { api } = await fetch('https://data.cityofnewyork.us/resource/jb7j-dtam.json')
-      this.chartdata = api
-      this.loaded = true
+      const { api } = await fetch('/https://data.cityofnewyork.us/resource/jb7j-dtam.json/api')
+      api.chartdata = api
+      api.loaded = true
     } catch (e) {
       console.error(e)
     }
   }
 }  
 /* onMounted(()=> { */
-  getnycdeaths();
-
+  // getnycdeaths();
 // });
 
 
