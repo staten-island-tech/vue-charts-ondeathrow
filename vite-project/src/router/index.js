@@ -18,7 +18,7 @@ const router = createRouter({
       path: '/doughnutgraph',
       name: 'doughnutgraph',
       component: () => import('../views/DoughnutGraph.vue')
-    }
+    },
   ]
 })
 

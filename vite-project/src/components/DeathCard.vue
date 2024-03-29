@@ -14,7 +14,7 @@
       <template v-else>
         female
       </template>
-      {{ nycdeaths.race_ethnicity }}s have died from {{ nycdeaths.leading_cause }}</h5>
+      {{ nycdeaths.race_ethnicity }}s have died from {{ nycdeaths.leading_cause }} in {{ nycdeaths.year }}</h5>
       <h5>Death/Mortality Rate: 
         <template v-if="nycdeaths.death_rate === '.'">
           this information is not available :(
@@ -23,15 +23,16 @@
           {{ nycdeaths.death_rate}}
         </template>
       </h5>
-<!--     <h3>{{ id }}</h3> dont really need this lmao-->
   </div>
 </template>
 
 <script setup>
+
+
 const props = defineProps({
   nycdeaths: Object,
-  id: Number 
 });
+
 </script>
 
 <style scoped>
