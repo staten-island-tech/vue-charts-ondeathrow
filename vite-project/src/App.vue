@@ -23,6 +23,7 @@ body {
   margin: 0;
 }
 
+
 header {
   position: fixed;
   top: 0;
@@ -34,6 +35,7 @@ header {
   height: 40px;
   text-align: center;
 }
+
 
 nav {
   display: flex;
@@ -47,6 +49,7 @@ nav a {
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
+
 
 nav a:first-of-type {
   border: 0;
@@ -64,10 +67,11 @@ nav a:first-of-type {
     height: 60px;
   }
 
+
   nav {
-    margin-left: 0; 
+    margin-left: 0;
     font-size: 1rem;
-    padding: 0; 
+    padding: 0;
     margin-top: 0;
   }
 }
