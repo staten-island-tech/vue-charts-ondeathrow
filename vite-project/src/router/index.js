@@ -20,7 +20,7 @@ const router = createRouter({
       component: () => import('../views/DoughnutGraph.vue')
     },
     {
-      path: '/NYCDeathsData:id',
+      path: '/NYCDeathsData/:id',
       name: 'NYCDeaths',
       component: () => import('../views/Deathsdata.vue')
     }

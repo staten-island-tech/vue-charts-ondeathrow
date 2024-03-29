@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Statistics for Deaths in NYC</h2>
+    <h1>Statistics for Deaths in NYC</h1>
   </div>
   <div class="container">
     <DeathCard v-for="(deaths, index) in nycdeaths"

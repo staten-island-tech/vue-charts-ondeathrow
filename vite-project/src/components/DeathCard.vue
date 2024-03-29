@@ -1,5 +1,5 @@
 <template>
-  <router-link :to = "deathspath" class="card">
+  <div class="card">
     <h2>{{ nycdeaths.leading_cause }}</h2>
     <h5>
       <template v-if = "nycdeaths.deaths === '.'">
@@ -23,23 +23,16 @@
           {{ nycdeaths.death_rate}}
         </template>
       </h5>
-<!--     <h3>{{ id }}</h3> dont really need this lmao-->
-  </router-link>
+  </div>
 </template>
 
 <script setup>
 
-import {computed} from 'vue'
-
-const deathspath = computed(() => {
-  return `/Deathsdata/${props.nycdeaths.deaths}`
-})
-// fix this later
 
 const props = defineProps({
   nycdeaths: Object,
-  id: Number 
 });
+
 </script>
 
 <style scoped>
